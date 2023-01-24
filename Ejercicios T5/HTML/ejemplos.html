@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">ç
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+<style type="text/css">
+   *{
+    box-sizing: border-box;
+   }
+   body{
+        width: 85%;
+        margin: 0 auto;
+        background-color: rgb(133, 125, 125);
+        font-style: sans-serif;
+    }
+    header{
+        width: 100%;
+        height: 150px;
+        padding: 30px;
+        /*background-image: linear-gradient(to right, green 25%, yellow 75%); /*Para poner direcciones deg0 segun los grados que queramos-->*/
+        /*background-image: repeating-linear-gradient(to right, black, white, black);*/
+        background-image: radial-gradient(circle farthest-side at center, white, black);
+        color: black;
+        text-align: center;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 0px;
+        /*border: 0.5px solid grey;*/
+        border-radius: 40px;
+    }
+    nav ul a{
+        border: 0.5px solid whitesmoke;
+        flex: 1 1 auto;
+        margin: 0 auto;
+        text-decoration: none;
+        height: 50px;
+        text-align: center;
+        background-color: white;
+        padding: 15px;
+        transition:background-color 1s;
+        color: rgb(46, 48, 48);
+        text-transform: uppercase;
+    }
+    nav ul a:hover{
+        color: rgb(255, 255, 255);
+        background-color: rgb(33, 33, 33);
+    }
+    .home{
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+    .contact{
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    nav ul a li:hover{
+    }
+    .miClase{
+        color: aqua;
+    }
+    .cuadrado{
+        flex: 1 1 auto;
+        justify-content: space-between;
+        background-color: brown;
+        height: 200px;
+        width: 200px;
+        margin: auto auto;
+        margin-top: 20px;
+        font-size: 24pt;
+        padding: 20px;
+        transition: 1s;
+        /*border-radius: 50%; /*Hacer un círculo*/
+    }
+    .flex{
+        display: flex;
+    }
+    .cuadrado:hover{
+       /* transform: translate(40px, 30px); /*También se pone transale y o x*/
+       /*transform: rotate(720deg); /*Siempre con su transition*/
+        /*transform: scale(2, 1.2);/*Se hace más grande*/
+        /*transform: skew(30deg, 30deg); /*Es como estirar la caja para deformarla*/
+        /*transform: matrix(1.5, 0, 0, 1.5, 150, 150) rotate(360deg);/*Para todos mirar en apuntes*/
+        /*transform: translateX(100px) rotate(360deg) scale(2);*/
+        transform: scale(1.1) rotate(360deg);
+    }
+    .rotate{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        transition: transform 0.5s;
+        /*backface-visibility: hidden;*/
+       
+        border-radius: 20%;
+        text-align: center;
+        padding: auto;
+    }
+    .rotate:hover{
+        transform: rotateY(180deg);
+        background-color: white;
+        transform-style: preserve-3d;
+    }
+    .fuera{
+        perspective: 200px;
+    }
+</style>
+<body>
+    <header>
+        <i class="bi bi-x-octagon-fill miClase"></i> <!--Es un texto más y si separas con espacio las clases son diferentes clases-->
+        <h1>HOLA HOLA</h1>
+    </header>
+    <nav>
+        <ul>
+            <a href="#" class="home"><li>Home</li></a>
+            <a href="#" class="services"><li>Services</li></a>
+            <a href="#" class="portfolio"><li>Portfolio</li></a>
+            <a href="#" class="about"><li>About</li></a>
+            <a href="#" class="blog"><li>Blog</li></a>
+            <a href="#" class="contact"><li>Contact</li></a>
+        </ul>
+    </nav>
+    <div class="flex">
+        <div class="cuadrado">
+            <p>HOLA HOLA</p>
+        </div>
+        <div class="cuadrado">
+            <p>HOLA HOLA</p>
+        </div>
+    </div>
+    <div class="fuera">
+        <div class="rotate">
+            <p>adios</p>
+        </div>
+    </div>
+</body>
+</html>

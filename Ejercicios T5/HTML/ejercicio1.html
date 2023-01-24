@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css">
+   *{
+    box-sizing: border-box;
+   }
+   body{
+        width: 85%;
+        margin: 0 auto;
+        background-color: rgb(133, 125, 125);
+        font-style: sans-serif;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 0px;
+        border-radius: 40px;
+    }
+    nav ul a{
+        border: 0.5px solid whitesmoke;
+        flex: 1 1 auto;
+        margin: 0 auto;
+        text-decoration: none;
+        height: 50px;
+        text-align: center;
+        background-color: white;
+        padding: 15px;
+        transition:background-color 1s;
+        color: rgb(46, 48, 48);
+        text-transform: uppercase;
+    }
+    nav ul a:hover{
+        color: rgb(255, 255, 255);
+        background-color: rgb(33, 33, 33);
+    }
+    .home{
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+    .contact{
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+</style>
+<body>
+<nav>
+    <ul>
+        <a href="#" class="home"><li>Home</li></a>
+        <a href="#" class="services"><li>Services</li></a>
+        <a href="#" class="portfolio"><li>Portfolio</li></a>
+        <a href="#" class="about"><li>About</li></a>
+        <a href="#" class="blog"><li>Blog</li></a>
+        <a href="#" class="contact"><li>Contact</li></a>
+    </ul>
+</nav>
+</body>
+</html>
