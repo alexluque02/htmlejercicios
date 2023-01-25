@@ -28,15 +28,17 @@
         text-align: center;
     }
     nav ul{
-        display: flex;
-        justify-content: space-between;
         list-style-type: none;
         padding: 0;
-        margin-bottom: 0px;
+    }
+    nav>ul{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
         /*border: 0.5px solid grey;*/
         border-radius: 40px;
     }
-    nav ul a{
+    nav>ul li{
         border: 0.5px solid whitesmoke;
         flex: 1 1 auto;
         margin: 0 auto;
@@ -48,10 +50,20 @@
         transition:background-color 1s;
         color: rgb(46, 48, 48);
         text-transform: uppercase;
+        transition: all;
     }
-    nav ul a:hover{
+    nav>ul>li:hover{
         color: rgb(255, 255, 255);
         background-color: rgb(33, 33, 33);
+    }
+    nav>ul>li>ul>li{
+        /*font-size: 0;*/
+        height: 0px;
+        transition:height 0.2s, font-size 0.2s;
+        overflow: hidden;
+    }
+    nav>ul>li:hover>ul>li{
+        height: 50px;
     }
     .home{
         border-bottom-left-radius: 20px;
@@ -61,8 +73,7 @@
         border-bottom-right-radius: 20px;
         border-top-right-radius: 20px;
     }
-    nav ul a li:hover{
-    }
+
     .miClase{
         color: aqua;
     }
@@ -101,14 +112,70 @@
         border-radius: 20%;
         text-align: center;
         padding: auto;
+        margin: 0 auto;
     }
     .rotate:hover{
-        transform: rotateY(180deg);
+        /*transform: rotateY(180deg);
         background-color: white;
-        transform-style: preserve-3d;
+        transform-style: preserve-3d;*/
+        animation:tembleque 0.2s infinite;
+    }
+
+    @keyframes tembleque{
+        0%{
+            transform: rotate(0deg);
+        }25%{
+            transform: rotate(8deg)
+        }75%{
+            transform: rotate(-8deg)
+        }100%{
+            transform: rotate(0deg)
+        }
     }
     .fuera{
         perspective: 200px;
+    }
+    div.boton{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        padding: 125px;
+        color: #fff;
+        font-size: 34pt;
+        background-color: green;
+        text-align: justify;
+       
+        /*animation-name: miAnimacion;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-direction: normal;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-fill-mode: backwards;*/
+        animation:miAnimacion 2s 1s normal infinite ease-in backwards;
+    }
+
+
+    div.boton:hover{
+    }
+
+    @keyframes miAnimacion{
+        0%{
+            transform: translate(0px, 0px);
+            background-color: green;
+        }25%{
+            transform: translate(900px, 0px);
+            background-color: blue;
+        }50%{
+            transform: translate(900px, 100px);
+            background-color: pink;
+        }75%{
+            transform: translate(0px, 100px);
+            background-color: purple;
+        }100%{
+            transform: translate(0px, 0px);
+            background-color: green;
+        }
     }
 </style>
 <body>
@@ -117,6 +184,20 @@
         <h1>HOLA HOLA</h1>
     </header>
     <nav>
+        <ul>
+            <li>Opcion
+                <ul>
+                    <li>Subcategoria</li>
+                    <li>Subcategoria</li>
+                </ul>
+            </li>
+            <li>Opcion</li>
+            <li>Opcion</li>
+            <li>Opcion</li>
+            <li>Opcion</li>
+        </ul>
+    </nav>
+    <!--<nav>
         <ul>
             <a href="#" class="home"><li>Home</li></a>
             <a href="#" class="services"><li>Services</li></a>
@@ -133,11 +214,14 @@
         <div class="cuadrado">
             <p>HOLA HOLA</p>
         </div>
-    </div>
+    </div>-->
     <div class="fuera">
         <div class="rotate">
-            <p>adios</p>
+           <!-- <p>adios</p>-->
         </div>
+    </div>
+    <div class="boton">
+        
     </div>
 </body>
 </html>
