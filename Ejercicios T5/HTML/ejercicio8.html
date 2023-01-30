@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        /**{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        nav ul{
+            list-style-type: none;
+        }
+        nav ul li{
+            position: relative;
+        }
+        nav ul li ul{
+            display: none;
+            position: absolute;
+        }
+        nav ul li:hover ul{
+            display: block;
+        }
+        */
+        .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.menu-item:hover .sub-menu {
+  display: block;
+}
+
+    </style>
+</head>
+<body>
+    <!--<nav>
+        <ul>
+            <li><a href=""><i class="bi bi-house-door-fill"></i> Home</a></li>
+            <li><a href=""><i class="bi bi-file-person-fill"></i> About</a></li>
+            <li><a href=""><i class="bi bi-camera-fill"></i> Portfolio</a>
+                <ul>
+                    <li><a href="">Submenú-1</a></li>
+                    <li><a href="">Submenú-2</a></li>
+                    <li><a href="">Submenú-1</a></li>
+                    <li><a href="">Submenú-1</a></li>
+                    <li><a href="">Submenú-1</a></li>
+                </ul>
+            </li>
+            <li><a href=""><i class="bi bi-telephone-fill"></i> Contact</a></li>
+            <li><a href=""><i class="bi bi-card-text"></i> Blog</a></li>
+        </ul>
+    </nav>-->
+    <ul class="menu">
+        <li class="menu-item">
+          <a href="#">Menú 1</a>
+          <ul class="sub-menu">
+            <li class="sub-menu-item"><a href="#">Submenú 1</a></li>
+            <li class="sub-menu-item"><a href="#">Submenú 2</a></li>
+            <li class="sub-menu-item"><a href="#">Submenú 3</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="#">Menú 2</a>
+          <ul class="sub-menu">
+            <li class="sub-menu-item"><a href="#">Submenú 1</a></li>
+            <li class="sub-menu-item"><a href="#">Submenú 2</a></li>
+            <li class="sub-menu-item"><a href="#">Submenú 3</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="#">Menú 3</a>
+          <ul class="sub-menu">
+            <li class="sub-menu-item"><a href="#">Submenú 1</a></li>
+            <li class="sub-menu-item"><a href="#">Submenú 2</a></li>
+            <li class="sub-menu-item"><a href="#">Submenú 3</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+</body>
+</html>
