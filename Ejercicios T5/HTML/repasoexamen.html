@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            width: 80%;
+            margin: 0 auto;
+        }
+        main{
+            margin: 0;
+        }
+        nav>ul{
+            display: flex;
+            padding-left: 0;
+            margin: 0;
+            margin-top: 10px;
+        }
+        nav>ul li{
+            flex:1 1 auto;
+            text-align: center;
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: black;
+            width: 100%;
+            border: 2px solid red;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            padding: 5px;
+            background: linear-gradient(to right, rgb(54, 54, 54), rgb(112, 111, 111));
+            transition: 1s;
+        }
+        p{
+            margin: 0;
+            padding: 10px;
+            border: 2px solid red;
+            display: none;
+        }
+        p:target{
+            display: block;
+            border-top: none;
+        }
+        nav>ul a:hover{
+            transform: rotate(360deg);
+            background: linear-gradient(to right, rgb(15, 144, 250), rgb(237, 149, 240));
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="#sobre"><li>Sobre Nosotros</li></a>
+                <a href="#blog"><li>Blog</li></a>
+                <a href="#contact"><li>Contacta con nosotros</li></a>
+                <a href="#mas"><li>Más</li></a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p id="sobre">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consequatur temporibus distinctio quas animi fugiat minus sapiente et recusandae quidem! Inventore magni architecto atque eum deserunt temporibus illo ea esse!
+        </p>
+        <p id="blog">
+            jwdfshkldjxnclkdjzmcvklmcdzñxcvm l dnxcvuil jhdsmxzosdjfkhkd,hjfncs sbdkcsdbfilucb 
+        </p>
+        <p id="contact">
+            Lorem ipsum dosad7kjchsdljzdmcoshiuc iohsfkus uinfskjvhjs i pcknj fv jnfks viohjopafhnkd 
+        <p id="mas">
+            dusiofhvksfsdopxv ihiof dcojdsmlzuvjf istinctio quas animi fugiat minus sapiente et recusandae quidem! Inventore magni architecto atque eum deserunt temporibus illo ea esse!
+        </p>
+    </main>
+</body>
+</html>

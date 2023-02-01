@@ -6,61 +6,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style type="text/css">
-        *{
-            box-sizing: border-box;
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Lato,"Helvetica Neue",Helvetica,Helvetica,Arial,sans-serif;
+            font-weight: 400;
+            width: 100%;
+            height: 100%;
+            background-color: #F4F3F6;
         }
-        header{
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+        nav {
+            width: 100%;
+            height: 9%;
+            display: flex;
+            background-color: #11181c;
+            font-size: 0.8em;
+        }
+        div ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
             width: 100%;
         }
-        nav{
-	        font-size: 10px;
-            background-color: black;
-            width: 100%;
-            padding: 5px;
-            height: 40px;
-        }
-        nav .menu1{
-            width: 70%;
+        #menu-left {
             float: left;
             display: flex;
+            width: 70%;
         }
-        nav .menu2{
-            width: 30%;
-            float: right;
+        #menu-left ul a{
             display: flex;
+            margin-right: 20px;
+            justify-content: flex-start;
         }
-        nav ul li{
-            flex: 1 1 auto;
-            background-color: black;
+        #menu-left ul a:first-child {
+            background-color: #00a0df;
+            width: 45px;
+            height: 100%;
+            padding-left: 5px;
+            transition: width 0.5s ease;
         }
-        img.logo{
-            height: 20px;
-            width: 20px;
+        #menu-left ul a:first-child:hover {
+            width: 140px;
         }
-        a{
+        #menu-right {
+            float: right;
+            align-content: flex-start;
+            display: flex;
+            width: 30%;
+            margin-right: 30px;
+        }
+        #menu-right ul a{
+            display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+        nav a {
+            text-decoration: none;
+            color: #aeb4b7;
+            text-transform: uppercase;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        .icon-ubqt-logo {
+            background: url('../IMG/logo-ubqt.png');
             width: 100%;
+            height: 40px;
+            background-repeat: no-repeat;
+        }
+        .icon-search {
+            width: 20px;
+            height: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul class="menu1">
-                <li><a href=""><img class="logo" src="../IMG/logo.png" alt=""></a></li>
-                <li><a href="">Software</a></li>
-                <li><a href="">Operator</a></li>
-                <li><a href="">Unifi</a></li>
-                <li><a href="">Ulabs</a></li>
-                <li><a href="">Products</a></li>
-                <li><a href="">Buy</a></li>
-            </ul>
-            <ul class="menu2">
-                <li><a href="">Downloads</a></li>
-                <li><a href="">Support</a></li>
-                <li><a href="">Community</a></li>
-                <li><a href="">Icono</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="wrapper">
+		<nav>
+			<div id="menu-left">
+				<ul>
+					<a href="">
+						<span class="icon-ubqt-logo"></span>
+					</a>
+					<a href="">
+						<li>Software</li>
+					</a>
+					<a href="">
+						<li>Operator</li>
+					</a>
+					<a href="">
+						<li>Unifi</li>
+					</a>
+					<a href="">
+						<li>Ulabs</li>
+					</a>
+					<a href="">
+						<li>Products</li>
+					</a>
+					<a href="">
+						<li>Buy</li>
+					</a>
+				</ul>
+			</div>
+			<div id="menu-right">
+				<ul>
+					<a href="">
+						<li>Downloads</li>
+					</a>
+					<a href="">
+						<li>Support</li>
+					</a>
+					<a href="">
+						<li>Community</li>
+					</a>
+					<a href="">
+						<img src="../IMG/apple_search_icon_cropped.png" class="icon-search" alt="">
+					</a>
+				</ul>
+			</div>
+		</nav>
+		<div id="content">
+			
+		</div>
+	</div>
 </body>
 </html>

@@ -42,7 +42,7 @@
             position: relative;
         }
 
-        nav ul li a:hover{
+        nav>ul>li>a:hover{
             background-color: #434343;
             animation: tembleque 0.4s ease-in;
         }
@@ -58,6 +58,16 @@
                 transform: rotate(0deg)
             }
         }
+
+        @keyframes desplazamiento {
+            0%{
+                transform: translate(0px, 0px);
+            }50%{
+                transform: translate(2px, 0px);
+            }100%{
+                transform: translate(0px, 0px);
+            }
+        }
         nav ul li ul{
             display: none;
             position: absolute;
@@ -67,6 +77,10 @@
         nav ul li:hover>ul{
             display: block;
             animation: submenu 0.3s ease-in;
+        }
+        nav ul li ul li a:hover{
+            animation: desplazamiento 1s ease-in;
+            background: linear-gradient(to right, rgb(12, 4, 85), rgb(4, 7, 165));
         }
         @keyframes submenu {
             from {
