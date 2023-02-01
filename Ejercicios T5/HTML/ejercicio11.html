@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style type="text/css">
-        #clock {
+        h1{
+            text-align: center;
+        }
+        #reloj {
             position: relative;
             width: 200px;
             height: 200px;
             margin: 0 auto;
             }
 
-        #disc {
+        #circ {
             position: absolute;
             top: 0;
             left: 0;
@@ -23,31 +26,36 @@
             border-radius: 50%;
         }
 
-        #arrow {
+        #aguja {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 35%;
+            left: 39%;
             width: 0;
             height: 0;
             border-bottom: 50px solid white;
             border-left: 25px solid transparent;
             border-right: 25px solid transparent;
-            transform: translate(-50%, -50%);   
-            transition: 60s;         
+            animation:miAnimacion 60s normal infinite linear paused; 
         }
 
-        #arrow:hover {
-            position: absolute;
-            transform: rotate(180deg);
+        #aguja:hover {
+            animation-play-state: running;
         }
 
-
+        @keyframes miAnimacion{
+        0%{
+            transform: rotate(0deg);
+        }100%{
+            transform: rotate(360deg);
+        }
+    }
     </style>
 </head>
 <body>
-    <div id="clock">
-        <div id="disc"></div>
-        <div id="arrow"></div>
+    <h1>Pon el ratón sobre la flecha</h1>
+    <div id="reloj">
+        <div id="circ"></div>
+        <div id="aguja"></div>
     </div>
 </body>
 </html>

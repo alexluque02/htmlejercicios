@@ -31,6 +31,12 @@
             text-align: center;
             border: .5px solid white;
         }
+        div{
+            margin-left: 290px;
+        }
+        div.contact{
+            margin-left:294px;
+        }
         a{
             display: flex;
             justify-content: left;
@@ -67,8 +73,7 @@
         nav>ul>li>ul>li:hover>a{
             background: linear-gradient(to right, black, gray);
         }
-        nav>ul>li>a:hover>.bi-caret-down-fill{
-
+        nav>ul>li>a:hover>div>.bi-caret-down-fill{
             transform: rotate(180deg);
         }
         @keyframes animacionMenu {
@@ -90,7 +95,7 @@
         <ul>
             <li><a href=""><i class="bi bi-house-door-fill"></i> &nbsp;Home</a></li>
             <li><a href=""><i class="bi bi-file-person-fill"></i> &nbsp;About</a></li>
-            <li><a href=""><i class="bi bi-camera-fill"></i> &nbsp;Portfolio <i class="bi bi-caret-down-fill"></i></a>
+            <li><a href=""><i class="bi bi-camera-fill"></i> &nbsp;Portfolio <div><i class="bi bi-caret-down-fill"></i></div></a>
                 <ul>
                     <li><a href="">Submenú-1</a></li>
                     <li><a href="">Submenú-2</a></li>
@@ -98,7 +103,7 @@
                     <li><a href="">Submenú-1</a></li>
                 </ul>
             </li>
-            <li><a href=""><i class="bi bi-telephone-fill"></i> &nbsp;Contact <i class="bi bi-caret-down-fill"></i></a>
+            <li><a href=""><i class="bi bi-telephone-fill"></i> &nbsp;Contact <div class="contact"><i class="bi bi-caret-down-fill"></i></div></a>
                 <ul>
                     <li><a href="">Submenú-1</a></li>
                     <li><a href="">Submenú-2</a></li>
